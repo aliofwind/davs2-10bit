@@ -20,8 +20,8 @@ if [ -d .git ] && command -v git >/dev/null 2>&1 ; then
 fi
 
 # generate version numbers
-VER_MAJOR=`echo $(($api / 10))`
-VER_MINOR=`echo $(($api % 10))`
+VER_MAJOR=1
+VER_MINOR=7
 
 # date and time information
 BUILD_TIME=`date "+%Y-%m-%d %H:%M:%S"`
@@ -58,5 +58,5 @@ echo "#endif // DAVS2_VERSION_H"                                                
 mv version.h source/version.h
 
 # show version informations
-echo "#define DAVS2_BUILD      $api"
+echo "#define DAVS2_BUILD      17"
 echo "#define DAVS2_POINTVER \"$VER_MAJOR.$VER_MINOR.$VER_R\""
